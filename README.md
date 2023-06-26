@@ -1,33 +1,32 @@
 # ATM Simulation System
-A Desktop Application that implements the working of an ATM.
 
 Nowadays, managing a bank is tedious job up to certain limit. With Internet Banking, the brick and mortar structure of the traditional banking gets converted into a click and portal model, thereby giving a concept of virtual banking a real shape. Hence a software that reduces the work is essential. Thus, considering above necessities, a software for managing all transactions has become necessary!
 
-The "ATM Simulation System" project is a model ATM that implements all major functionalities of an ATM Machine. This project has been implemented as a desktop application coded in JAVA, with mysql database used to store the data. The GUI is designed using Swing/AWT.
+The "ATM Simulation System" project is a model that implements all major functionalities of an ATM Machine. This project has been implemented as a desktop application coded entirely in JAVA, with mysql database used to store the data. The GUI is designed using Swing/AWT.
 
-This application enables the customers to perform the basic banking transactions by sitting at their office or at homes through PC or laptop. The system provides the access to the customer to create an account, deposit/withdraw the cash from his account, also to view reports of all accounts present. This model can be easily integrated with any banking site/application to allow the customers to perform any transaction. 
+This application enables the customers to perform the basic banking transactions by sitting at their office or at homes through PC or laptop. The system provides the access to the customer to create an account, deposit/withdraw the cash from his account, also to view reports of all accounts present. This model can be easily integrated with any banking site/application to allow the customers to perform any transaction and keep track of them easily.
 
-A user can
+# Features:
 -> Login/Create an account
 -> Withdraw/Deposit cash from/into their account
--> Mini Statement of account transactions
--> Check balance
--> Change ATM Pin
+-> E-Statement of account transactions
+-> Check balance or change ATM Pin
 
-Installation details:
-Make sure you have latest version of JDK (JDK 11 or above).
 
-Download the zip of the project from the repository and and unzip in the location wherever you want to.
+# Installation details:
+1. Make sure you have latest version of JDK (JDK 18 or above).
 
-Open the folder in your IDE, and add the following jar files in your referenced libraries or modules (depends upon your IDE for example, in VS code you have references libraries and in intellij, you add jars in your modules as well as global libraries) => 8 jars in the lib folder of javafx-sdk-15.0.1 inside the dependencies folder of the project => 1 jar for sqlite JDBC connector in the dependencies folder
+2 .Download the zip of the project from the repository and and unzip in the location wherever you want to.
 
-Run login.java
+3. Open the folder in your IDE, and add the following jar files in your referenced libraries or modules:
+   => mysql-connector-java-8.0.30.jar or above for JDBC connection
+   => JCalender
 
-Features
-Screenshots
+4. Run login.java from src
+
+# Screenshots:
 <img width="589" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/ea1dd2c7-3ffe-4272-bd1c-f4dbf8ed6e19">
 <img width="375" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/bd30ce82-49be-4af0-b98b-4f464e17df70">
-
 <img width="377" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/f882f75c-4863-452d-8b04-90f31c58dc2b">
 <img width="621" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/621e4adc-77cf-4435-9b37-caa20ac30183">
 <img width="623" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/fb5bf892-0c42-45ec-90e6-09d890111a03">
