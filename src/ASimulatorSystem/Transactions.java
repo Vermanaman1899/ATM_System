@@ -8,7 +8,7 @@ import java.sql.*;
 public class Transactions extends JFrame implements ActionListener{
 
     JLabel l1;
-    JButton b1,b2,b3,b4,b5,b6,b7;
+    JButton b1,b2,b3,b4,b5,b6,b7,b8;
     String cardno;
     Transactions(String cardno){
         this.cardno = cardno;
@@ -31,6 +31,7 @@ public class Transactions extends JFrame implements ActionListener{
         b5 = new JButton("PIN CHANGE");
         b6 = new JButton("BALANCE ENQUIRY");
         b7 = new JButton("EXIT");
+        b8 = new JButton("LOG OUT");
 
         b1.setFont(new Font("System", Font.BOLD, 8));
         b2.setFont(new Font("System", Font.BOLD, 8));
@@ -39,6 +40,7 @@ public class Transactions extends JFrame implements ActionListener{
         b5.setFont(new Font("System", Font.BOLD, 8));
         b6.setFont(new Font("System", Font.BOLD, 8));
         b7.setFont(new Font("System", Font.BOLD, 8));
+        b8.setFont(new Font("System", Font.BOLD, 8));
         
         setLayout(null);
 
@@ -63,8 +65,11 @@ public class Transactions extends JFrame implements ActionListener{
         b6.setBounds(187,295,100,18);
         l2.add(b6);
         
-        b7.setBounds(85,318,100,18);
+        b7.setBounds(85,317,100,18);
         l2.add(b7);
+
+        b8.setBounds(187,317,100,18);
+        l2.add(b8);
         
         
         b1.addActionListener(this);
@@ -74,6 +79,7 @@ public class Transactions extends JFrame implements ActionListener{
         b5.addActionListener(this);
         b6.addActionListener(this);
         b7.addActionListener(this);
+        b8.addActionListener(this);
 
         setSize(500,540);
         setUndecorated(true);
@@ -101,8 +107,11 @@ public class Transactions extends JFrame implements ActionListener{
         }else if(ae.getSource()==b6){ 
             this.setVisible(false);
             new BalanceEnquiry(cardno).setVisible(true);
-        }else if(ae.getSource()==b7){ 
+        }else if(ae.getSource()==b7) {
             System.exit(0);
+        }else if(ae.getSource()==b8){
+            this.setVisible(false);
+            new Login().setVisible(true);
         }
     }
     
