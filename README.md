@@ -26,26 +26,26 @@ This application enables the customers to perform the basic banking transactions
 4. Run login.java from src
 
 # Screenshots:
-<img width="589" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/ea1dd2c7-3ffe-4272-bd1c-f4dbf8ed6e19">
 
-<img width="375" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/bd30ce82-49be-4af0-b98b-4f464e17df70">
+Login:
+<img width="589" alt="Screenshot 2023-06-26 211359" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/fe4e07e7-e494-4c86-8f62-6c9005c6442c">
 
-<img width="377" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/f882f75c-4863-452d-8b04-90f31c58dc2b">
+Sign Up:
+<img width="617" alt="Screenshot 2023-06-26 211719" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/a3b26fd5-c611-4fa8-a24b-4439f8bd8d2d">
+<img width="621" alt="Screenshot 2023-06-26 211831" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/f6a36fbc-a780-4d92-9f29-38a331216653">
 
-<img width="621" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/621e4adc-77cf-4435-9b37-caa20ac30183">
+Transactions:
+<img width="376" alt="Screenshot 2023-06-26 211454" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/95e2c637-a6b5-44a7-87e7-7d2137872839">
 
-<img width="623" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/fb5bf892-0c42-45ec-90e6-09d890111a03">
+Deposit:
+<img width="375" alt="Screenshot 2023-06-26 211519" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/b367af2b-2a6b-4ce6-acb2-aa1bf55319b4">
 
-<img width="617" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/2f85e1a8-48d6-444c-9a60-0a1a2f584475">
+Withdrawal:
+<img width="373" alt="Screenshot 2023-06-26 211539" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/a7d947a7-4534-4fb6-9a39-9ee77cf2ab25">
 
-<img width="371" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/4c87d3e8-90f6-4dc5-b619-883a53549463">
+Change PIN:
+<img width="370" alt="Screenshot 2023-06-26 211610" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/9bdf62a3-4f9b-46f7-b17c-9039da02c9c2">
+<img width="371" alt="Screenshot 2023-06-26 211629" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/17704611-05fc-47cd-be5b-c901b69c0c66">
 
-<img width="370" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/cd3863ec-f68b-474f-8666-6ffed4786ccb">
-
-<img width="372" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/2b66103b-a25f-4a65-a102-c14157f78d51">
-
-<img width="373" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/5bad2544-8865-4f89-bae0-1471f59ae09f">
-
-<img width="376" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/ff75992c-a5f5-47b9-a78f-1b665528a0ff">
-
-
+Statement
+<img width="377" alt="Screenshot 2023-06-26 213333" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/f8941310-e636-4681-8aab-9073e3d465c9">
