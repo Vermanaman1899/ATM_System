@@ -13,37 +13,37 @@ public class Login extends JFrame implements ActionListener{
   
     Login(){
         setTitle("AUTOMATED TELLER MACHINE");
-        
+
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/logo.jpg"));
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l11 = new JLabel(i3);
-        l11.setBounds(70, 10, 100, 100);
+        l11.setBounds(170, 10, 100, 100);
         add(l11);
         
         l1 = new JLabel("WELCOME TO ATM");
         l1.setFont(new Font("Osward", Font.BOLD, 38));
-        l1.setBounds(200,40,450,40);
+        l1.setBounds(270,40,450,40);
         add(l1);
         
         l2 = new JLabel("Card No:");
         l2.setFont(new Font("Raleway", Font.BOLD, 28));
-        l2.setBounds(125,150,375,30);
+        l2.setBounds(220,150,375,30);
         add(l2);
         
         tf1 = new JTextField(15);
-        tf1.setBounds(300,150,230,30);
+        tf1.setBounds(370,150,230,30);
         tf1.setFont(new Font("Arial", Font.BOLD, 14));
         add(tf1);
         
         l3 = new JLabel("PIN:");
         l3.setFont(new Font("Raleway", Font.BOLD, 28));
-        l3.setBounds(125,220,375,30);
+        l3.setBounds(220,220,375,30);
         add(l3);
         
         pf2 = new JPasswordField(15);
         pf2.setFont(new Font("Arial", Font.BOLD, 14));
-        pf2.setBounds(300,220,230,30);
+        pf2.setBounds(370,220,230,30);
         add(pf2);
                 
         b1 = new JButton("SIGN IN");
@@ -61,15 +61,15 @@ public class Login extends JFrame implements ActionListener{
         setLayout(null);
         
         b1.setFont(new Font("Arial", Font.BOLD, 14));
-        b1.setBounds(300,300,100,30);
+        b1.setBounds(290,300,100,30);
         add(b1);
         
         b2.setFont(new Font("Arial", Font.BOLD, 14));
-        b2.setBounds(430,300,100,30);
+        b2.setBounds(420,300,100,30);
         add(b2);
         
         b3.setFont(new Font("Arial", Font.BOLD, 14));
-        b3.setBounds(300,350,230,30);
+        b3.setBounds(290,350,230,30);
         add(b3);
         
         b1.addActionListener(this);
@@ -79,7 +79,7 @@ public class Login extends JFrame implements ActionListener{
         getContentPane().setBackground(Color.WHITE);
         
         setSize(800,480);
-        setLocation(550,200);
+        setLocation(230,90);
         setVisible(true);
         
     }

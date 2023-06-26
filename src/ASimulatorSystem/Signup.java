@@ -25,58 +25,57 @@ public class Signup extends JFrame implements ActionListener{
     Signup(){
         
         setTitle("NEW ACCOUNT APPLICATION FORM");
-        
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/logo.jpg"));
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l11 = new JLabel(i3);
-        l11.setBounds(20, 0, 100, 100);
+        l11.setBounds(90, 0, 100, 100);
         add(l11);
         
         l1 = new JLabel("APPLICATION FORM NO. "+first);
-        l1.setFont(new Font("Raleway", Font.BOLD, 38));
+        l1.setFont(new Font("Raleway", Font.BOLD, 36));
         
         l2 = new JLabel("Page 1: Personal Details");
-        l2.setFont(new Font("Raleway", Font.BOLD, 22));
+        l2.setFont(new Font("Raleway", Font.BOLD, 20));
         
         l3 = new JLabel("Name:");
-        l3.setFont(new Font("Raleway", Font.BOLD, 20));
+        l3.setFont(new Font("Raleway", Font.BOLD, 18));
         
         l4 = new JLabel("Father's Name:");
-        l4.setFont(new Font("Raleway", Font.BOLD, 20));
+        l4.setFont(new Font("Raleway", Font.BOLD, 18));
         
         l5 = new JLabel("Date of Birth:");
-        l5.setFont(new Font("Raleway", Font.BOLD, 20));
+        l5.setFont(new Font("Raleway", Font.BOLD, 18));
         
         l6 = new JLabel("Gender:");
-        l6.setFont(new Font("Raleway", Font.BOLD, 20));
+        l6.setFont(new Font("Raleway", Font.BOLD, 18));
         
         l7 = new JLabel("Email Address:");
-        l7.setFont(new Font("Raleway", Font.BOLD, 20));
+        l7.setFont(new Font("Raleway", Font.BOLD, 18));
         
         l8 = new JLabel("Marital Status:");
-        l8.setFont(new Font("Raleway", Font.BOLD, 20));
+        l8.setFont(new Font("Raleway", Font.BOLD, 18));
         
         l9 = new JLabel("Address:");
-        l9.setFont(new Font("Raleway", Font.BOLD, 20));
+        l9.setFont(new Font("Raleway", Font.BOLD, 18));
         
         l10 = new JLabel("City:");
-        l10.setFont(new Font("Raleway", Font.BOLD, 20));
+        l10.setFont(new Font("Raleway", Font.BOLD, 18));
         
         l11 = new JLabel("Pin Code:");
-        l11.setFont(new Font("Raleway", Font.BOLD, 20));
+        l11.setFont(new Font("Raleway", Font.BOLD, 18));
         
         l12 = new JLabel("State:");
-        l12.setFont(new Font("Raleway", Font.BOLD, 20));
+        l12.setFont(new Font("Raleway", Font.BOLD, 18));
         
         l13 = new JLabel("Date");
-        l13.setFont(new Font("Raleway", Font.BOLD, 14));
+        l13.setFont(new Font("Raleway", Font.BOLD, 12));
         
         l14 = new JLabel("Month");
-        l14.setFont(new Font("Raleway", Font.BOLD, 14));
+        l14.setFont(new Font("Raleway", Font.BOLD, 12));
         
         l15 = new JLabel("Year");
-        l15.setFont(new Font("Raleway", Font.BOLD, 14));
+        l15.setFont(new Font("Raleway", Font.BOLD, 12));
         
         
         t1 = new JTextField();
@@ -137,13 +136,12 @@ public class Signup extends JFrame implements ActionListener{
         groupstatus.add(r5);
         
         dateChooser = new JDateChooser();
-	//dateChooser.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
-	dateChooser.setForeground(new Color(105, 105, 105));
-	dateChooser.setBounds(137, 337, 200, 29);
-	add(dateChooser);
+        dateChooser.setForeground(new Color(105, 105, 105));
+        dateChooser.setBounds(137, 337, 200, 29);
+        add(dateChooser);
         
         setLayout(null);
-        l1.setBounds(140,20,600,40);
+        l1.setBounds(200,20,600,40);
         add(l1);
         
         l2.setBounds(290,80,600,30);
@@ -226,7 +224,7 @@ public class Signup extends JFrame implements ActionListener{
         
         getContentPane().setBackground(Color.WHITE);
         
-        setSize(850,800);
+        setSize(850,660);
         setLocation(200,10);
         setVisible(true);
     }
