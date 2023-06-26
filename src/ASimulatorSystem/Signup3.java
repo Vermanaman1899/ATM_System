@@ -96,7 +96,7 @@ public class Signup3 extends JFrame implements ActionListener{
         c6.setBackground(Color.WHITE);
         c6.setFont(new Font("Raleway", Font.BOLD, 16));
         
-        c7 = new JCheckBox("I hereby declares that the above entered details correct to th best of my knowledge.",true);
+        c7 = new JCheckBox("I hereby declares that the above entered details correct to the best of my knowledge.",true);
         c7.setBackground(Color.WHITE);
         c7.setFont(new Font("Raleway", Font.BOLD, 12));
          

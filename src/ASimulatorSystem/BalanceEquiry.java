@@ -26,12 +26,19 @@ class BalanceEnquiry extends JFrame implements ActionListener {
         l1.setForeground(Color.WHITE);
         l1.setFont(new Font("System", Font.BOLD, 10));
 
+        l2 = new JLabel();
+        l2.setForeground(Color.WHITE);
+        l2.setFont(new Font("System", Font.BOLD, 10));
+
         b1 = new JButton("BACK");
 
         setLayout(null);
 
         l1.setBounds(95,200,250,25);
         l3.add(l1);
+
+        l2.setBounds(150,250,250,25);
+        l3.add(l2);
 
 
         b1.setBounds(85,318,100,18);
@@ -50,8 +57,8 @@ class BalanceEnquiry extends JFrame implements ActionListener {
             }
         }catch(Exception e){}
         
-        l1.setText("Your Current Account Balance is Rs "+balance);
-
+        l1.setText("Your Current Account Balance is:");
+        l2.setText("Rs. "+balance+" /- ONLY");
         b1.addActionListener(this);
 
         setSize(500,540);

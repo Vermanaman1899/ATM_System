@@ -8,9 +8,9 @@ import java.sql.*;
 
 public class Pin extends JFrame implements ActionListener{
     
-    JPasswordField t1,t2;
+    JPasswordField t1,t2,t3;
     JButton b1,b2;                               
-    JLabel l1,l2,l3;
+    JLabel l1,l2,l3,l5;
     String pin;
     Pin(String pin){
         this.pin = pin;
@@ -32,12 +32,20 @@ public class Pin extends JFrame implements ActionListener{
         l3 = new JLabel("Re-enter new PIN:");
         l3.setFont(new Font("System", Font.BOLD, 9));
         l3.setForeground(Color.WHITE);
+
+        l5 = new JLabel("Enter your PIN:");
+        l5.setFont(new Font("System", Font.BOLD, 9));
+        l5.setForeground(Color.WHITE);
         
         t1 = new JPasswordField();
         t1.setFont(new Font("Raleway", Font.BOLD, 20));
         
         t2 = new JPasswordField();
         t2.setFont(new Font("Raleway", Font.BOLD, 20));
+
+        t3 = new JPasswordField();
+        t3.setFont(new Font("Raleway", Font.BOLD, 20));
+
         
         b1 = new JButton("CHANGE");
         b2 = new JButton("BACK");
@@ -50,18 +58,24 @@ public class Pin extends JFrame implements ActionListener{
         l1.setBounds(95,215,250,25);
         l4.add(l1);
 
-        l2.setBounds(95,245,150,25);
+        l2.setBounds(95,268,150,25);
         l4.add(l2);
 
-        l3.setBounds(95,268,150,25);
+        l3.setBounds(95,291,150,25);
         l4.add(l3);
+
+        l5.setBounds(95,245,150,25);
+        l4.add(l5);
         //
 
-        t1.setBounds(190,248,95,19);
+        t1.setBounds(190,272,95,19);
         l4.add(t1);
         
-        t2.setBounds(190,272,95,19);
+        t2.setBounds(190,295,95,19);
         l4.add(t2);
+
+        t3.setBounds(190,248,95,19);
+        l4.add(t3); //Old pin
 
         b1.setBounds(187,318,100,18);
         l4.add(b1);
@@ -78,23 +92,27 @@ public class Pin extends JFrame implements ActionListener{
     }
     
     public void actionPerformed(ActionEvent ae){
-        try{        
+        try{
+            String oldpin=t3.getText();
             String npin = t1.getText();
             String rpin = t2.getText();
             
-            if(!npin.equals(rpin)){
-                JOptionPane.showMessageDialog(null, "Entered PIN does not match");
-                return;
-            }
-            
             if(ae.getSource()==b1){
-                if (t1.getText().equals("")){
-                    JOptionPane.showMessageDialog(null, "Enter New PIN");
+                if (!oldpin.equals(pin) || oldpin.equals("")){
+                    JOptionPane.showMessageDialog(null, "Old Pin is incorrect, try again");
+                    return;
                 }
-                if (t2.getText().equals("")){
-                    JOptionPane.showMessageDialog(null, "Re-Enter new PIN");
+
+                if (npin.length()!=4){
+                    JOptionPane.showMessageDialog(null, "Re-enter a new pin of 4 digits");
+                    return;
                 }
-                
+
+                if(!npin.equals(rpin)){
+                    JOptionPane.showMessageDialog(null, "PIN does not match, try again");
+                    return;
+                }
+
                 Conn c1 = new Conn();
                 String q1 = "update bank set pin = '"+rpin+"' where pin = '"+pin+"' ";
                 String q2 = "update login set pin = '"+rpin+"' where pin = '"+pin+"' ";

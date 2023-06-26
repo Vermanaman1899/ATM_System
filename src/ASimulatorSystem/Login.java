@@ -93,10 +93,10 @@ public class Login extends JFrame implements ActionListener{
                         Conn c1 = new Conn();
                         String cardno  = tf1.getText();
                         String pin  = pf2.getText();
-                        System.out.println(pin);
+//                        System.out.println(pin);
                         String q  = "select * from login where cardnumber = '"+cardno+"' and pin = '"+pin+"'";
                         ResultSet rs = c1.s.executeQuery(q);
-                        System.out.println(q);
+//                        System.out.println(q);
                         if(rs.next()){
                             setVisible(false);
                             new Transactions(pin).setVisible(true);

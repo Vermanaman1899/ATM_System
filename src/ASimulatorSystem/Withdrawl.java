@@ -73,13 +73,18 @@ public class Withdrawl extends JFrame implements ActionListener{
             if(ae.getSource()==b1){
                 if(t1.getText().equals("")){
                     JOptionPane.showMessageDialog(null, "Please enter the Amount to you want to Withdraw");
-                }else{
+                }
+                else if (Integer.parseUnsignedInt(t1.getText())>10000){
+                    JOptionPane.showMessageDialog(null, "Amount exceeds maximum limit");
+                }
+                else{
+
                     Conn c1 = new Conn();
                     
                     ResultSet rs = c1.s.executeQuery("select * from bank where pin = '"+pin+"'");
                     int balance = 0;
                     while(rs.next()){
-                       if(rs.getString("mode").equals("Deposit")){
+                       if(rs.getString("type").equals("Deposit")){
                            balance += Integer.parseInt(rs.getString("amount"));
                        }else{
                            balance -= Integer.parseInt(rs.getString("amount"));

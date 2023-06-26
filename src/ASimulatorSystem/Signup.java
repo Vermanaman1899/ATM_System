@@ -19,7 +19,8 @@ public class Signup extends JFrame implements ActionListener{
     
     
     Random ran = new Random();
-    long first4 = (ran.nextLong() % 9000L) + 1000L;
+    long first4 = (ran.nextInt(9000)) + 1000L;
+
     String first = "" + Math.abs(first4);
     
     Signup(){
