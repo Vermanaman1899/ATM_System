@@ -86,18 +86,31 @@ public class Login extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent ae){
         try{        
             if(ae.getSource()==b1){
-                Conn c1 = new Conn();
-                String cardno  = tf1.getText();
-                String pin  = pf2.getText();
-                String q  = "select * from login where cardno = '"+cardno+"' and pin = '"+pin+"'";
+                try{
+                    if(tf1.getText().equals("") || pf2.getText().equals("")){
+                        JOptionPane.showMessageDialog(null, "Fill all the required fields");
+                    }else{
+                        Conn c1 = new Conn();
+                        String cardno  = tf1.getText();
+                        String pin  = pf2.getText();
+                        System.out.println(pin);
+                        String q  = "select * from login where cardnumber = '"+cardno+"' and pin = '"+pin+"'";
+                        ResultSet rs = c1.s.executeQuery(q);
+                        System.out.println(q);
+                        if(rs.next()){
+                            setVisible(false);
+                            new Transactions(pin).setVisible(true);
+                        }else {
+                            JOptionPane.showMessageDialog(null, "Incorrect Card Number or PIN");
+                        }
+                    }
 
-                ResultSet rs = c1.s.executeQuery(q);
-                if(rs.next()){
-                    setVisible(false);
-                    new Transactions(pin).setVisible(true);
-                }else{
-                    JOptionPane.showMessageDialog(null, "Incorrect Card Number or PIN");
+                }catch(Exception e){
+                    e.printStackTrace();
                 }
+
+
+
             }else if(ae.getSource()==b2){
                 tf1.setText("");
                 pf2.setText("");

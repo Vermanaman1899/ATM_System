@@ -227,10 +227,10 @@ public class Signup3 extends JFrame implements ActionListener{
         }
         
         Random ran = new Random();
-        long first7 = (ran.nextLong() % 90000000L) + 5040936000000000L;
+        long first7 = (ran.nextLong() % 90000000L) + 6353015200000000L;
         String cardno = "" + Math.abs(first7);
         
-        long first3 = (ran.nextLong() % 9000L) + 1000L;
+        long first3 = (ran.nextInt(9000)) + 1000L;
         String pin = "" + Math.abs(first3);
         
         String facility = "";
@@ -260,6 +260,7 @@ public class Signup3 extends JFrame implements ActionListener{
                     JOptionPane.showMessageDialog(null, "Fill all the required fields");
                 }else{
                     Conn c1 = new Conn();
+                    System.out.println(pin);
                     String q1 = "insert into signupthree values('"+formno+"','"+atype+"','"+cardno+"','"+pin+"','"+facility+"')";
                     String q2 = "insert into login values('"+formno+"','"+cardno+"','"+pin+"')";
                     c1.s.executeUpdate(q1);
