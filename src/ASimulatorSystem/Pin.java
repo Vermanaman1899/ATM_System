@@ -11,9 +11,9 @@ public class Pin extends JFrame implements ActionListener{
     JPasswordField t1,t2,t3;
     JButton b1,b2;                               
     JLabel l1,l2,l3,l5;
-    String pin;
-    Pin(String pin){
-        this.pin = pin;
+    String cardno;
+    Pin(String cardno){
+        this.cardno = cardno;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance(510, 600, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -93,11 +93,24 @@ public class Pin extends JFrame implements ActionListener{
     
     public void actionPerformed(ActionEvent ae){
         try{
-            String oldpin=t3.getText();
-            String npin = t1.getText();
-            String rpin = t2.getText();
             
             if(ae.getSource()==b1){
+
+                Conn c1 = new Conn();
+
+                String q4 = "select * from login where cardnumber = '"+cardno+"' ";
+                ResultSet rs = c1.s.executeQuery(q4);
+
+                String pin="";
+                while(rs.next()){
+                    pin=rs.getString(3);
+//                    System.out.println(pin);
+                }
+//                String pin=rs.getString(2);
+                String oldpin=t3.getText();
+                String npin = t1.getText();
+                String rpin = t2.getText();
+
                 if (!oldpin.equals(pin) || oldpin.equals("")){
                     JOptionPane.showMessageDialog(null, "Old Pin is incorrect, try again");
                     return;
@@ -113,12 +126,11 @@ public class Pin extends JFrame implements ActionListener{
                     return;
                 }
 
-                Conn c1 = new Conn();
-                String q1 = "update bank set pin = '"+rpin+"' where pin = '"+pin+"' ";
+//                String q1 = "update bank set pin = '"+rpin+"' where pin = '"+pin+"' ";
                 String q2 = "update login set pin = '"+rpin+"' where pin = '"+pin+"' ";
                 String q3 = "update signupthree set pin = '"+rpin+"' where pin = '"+pin+"' ";
 
-                c1.s.executeUpdate(q1);
+//                c1.s.executeUpdate(q1);
                 c1.s.executeUpdate(q2);
                 c1.s.executeUpdate(q3);
 
@@ -127,7 +139,7 @@ public class Pin extends JFrame implements ActionListener{
                 new Transactions(rpin).setVisible(true);
             
             }else if(ae.getSource()==b2){
-                new Transactions(pin).setVisible(true);
+                new Transactions(cardno).setVisible(true);
                 setVisible(false);
             }
         }catch(Exception e){

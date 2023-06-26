@@ -19,7 +19,8 @@ public class MiniStatement extends JFrame implements ActionListener{
         add(l1);
         
         JLabel l2 = new JLabel("Indian Bank");
-        l2.setBounds(150, 20, 100, 20);
+        l2.setFont(new Font("System",Font.BOLD,16));
+        l2.setBounds(150, 20, 100, 50);
         add(l2);
         
         JLabel l3 = new JLabel();
@@ -62,7 +63,7 @@ public class MiniStatement extends JFrame implements ActionListener{
         b1.addActionListener(this);
         
         l1.setBounds(20, 140, 400, 200);
-        b1.setBounds(20, 500, 100, 25);
+        b1.setBounds(30, 450, 100, 30);
     }
     public void actionPerformed(ActionEvent ae){
         this.setVisible(false);

@@ -12,9 +12,9 @@ public class Withdrawl extends JFrame implements ActionListener{
     JTextField t1,t2;
     JButton b1,b2,b3;
     JLabel l1,l2,l3,l4;
-    String pin;
-    Withdrawl(String pin){
-        this.pin = pin;
+    String cardno;
+    Withdrawl(String cardno){
+        this.cardno = cardno;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance(510, 600, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -81,7 +81,7 @@ public class Withdrawl extends JFrame implements ActionListener{
 
                     Conn c1 = new Conn();
                     
-                    ResultSet rs = c1.s.executeQuery("select * from bank where pin = '"+pin+"'");
+                    ResultSet rs = c1.s.executeQuery("select * from bank where cardnumber = '"+cardno+"'");
                     int balance = 0;
                     while(rs.next()){
                        if(rs.getString("type").equals("Deposit")){
@@ -95,15 +95,15 @@ public class Withdrawl extends JFrame implements ActionListener{
                         return;
                     }
                     
-                    c1.s.executeUpdate("insert into bank values('"+pin+"', '"+date+"', 'Withdrawl', '"+amount+"')");
+                    c1.s.executeUpdate("insert into bank values('"+cardno+"', '"+date+"', 'Withdrawl', '"+amount+"')");
                     JOptionPane.showMessageDialog(null, "Rs. "+amount+" Debited Successfully");
                     
                     setVisible(false);
-                    new Transactions(pin).setVisible(true);
+                    new Transactions(cardno).setVisible(true);
                 }
             }else if(ae.getSource()==b2){
                 setVisible(false);
-                new Transactions(pin).setVisible(true);
+                new Transactions(cardno).setVisible(true);
             }
         }catch(Exception e){
                 e.printStackTrace();

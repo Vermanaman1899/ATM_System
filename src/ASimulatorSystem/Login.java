@@ -99,7 +99,7 @@ public class Login extends JFrame implements ActionListener{
 //                        System.out.println(q);
                         if(rs.next()){
                             setVisible(false);
-                            new Transactions(pin).setVisible(true);
+                            new Transactions(cardno).setVisible(true);
                         }else {
                             JOptionPane.showMessageDialog(null, "Incorrect Card Number or PIN");
                         }

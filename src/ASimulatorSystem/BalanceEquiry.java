@@ -11,10 +11,10 @@ class BalanceEnquiry extends JFrame implements ActionListener {
     JTextField t1, t2;
     JButton b1, b2, b3;
     JLabel l1, l2, l3;
-    String pin;
+    String cardno;
 
-    BalanceEnquiry(String pin) {
-        this.pin = pin;
+    BalanceEnquiry(String cardno) {
+        this.cardno = cardno;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance(510, 600, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -47,7 +47,7 @@ class BalanceEnquiry extends JFrame implements ActionListener {
         int balance = 0;
         try{
             Conn c1 = new Conn();
-            ResultSet rs = c1.s.executeQuery("select * from bank where pin = '"+pin+"'");
+            ResultSet rs = c1.s.executeQuery("select * from bank where cardnumber = '"+cardno+"'");
             while (rs.next()) {
                 if (rs.getString("type").equals("Deposit")) {
                     balance += Integer.parseInt(rs.getString("amount"));
@@ -69,7 +69,7 @@ class BalanceEnquiry extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         setVisible(false);
-        new Transactions(pin).setVisible(true);
+        new Transactions(cardno).setVisible(true);
     }
 
     public static void main(String[] args) {

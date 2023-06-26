@@ -11,10 +11,10 @@ public class FastCash extends JFrame implements ActionListener {
     JLabel l1, l2;
     JButton b1, b2, b3, b4, b5, b6, b7, b8;
     JTextField t1;
-    String pin;
+    String cardno;
 
-    FastCash(String pin) {
-        this.pin = pin;
+    FastCash(String cardno) {
+        this.cardno = cardno;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance(510, 600, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -86,7 +86,7 @@ public class FastCash extends JFrame implements ActionListener {
         try {
             String amount = ((JButton)ae.getSource()).getText().substring(3); //k
             Conn c = new Conn();
-            ResultSet rs = c.s.executeQuery("select * from bank where pin = '"+pin+"'");
+            ResultSet rs = c.s.executeQuery("select * from bank where cardnumber = '"+cardno+"'");
             int balance = 0;
             while (rs.next()) {
                 if (rs.getString("type").equals("Deposit")) {
@@ -102,14 +102,14 @@ public class FastCash extends JFrame implements ActionListener {
 
             if (ae.getSource() == b7) {
                 this.setVisible(false);
-                new Transactions(pin).setVisible(true);
+                new Transactions(cardno).setVisible(true);
             }else{
                 Date date = new Date();
-                c.s.executeUpdate("insert into bank values('"+pin+"', '"+date+"', 'Withdrawl', '"+amount+"')");
+                c.s.executeUpdate("insert into bank values('"+cardno+"', '"+date+"', 'Withdrawl', '"+amount+"')");
                 JOptionPane.showMessageDialog(null, "Rs. "+amount+" Debited Successfully");
                     
                 setVisible(false);
-                new Transactions(pin).setVisible(true);
+                new Transactions(cardno).setVisible(true);
             }
         } catch (Exception e) {
             e.printStackTrace();
