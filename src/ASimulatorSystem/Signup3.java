@@ -22,11 +22,11 @@ public class Signup3 extends JFrame implements ActionListener{
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l14 = new JLabel(i3);
-        l14.setBounds(150, 0, 100, 100);
+        l14.setBounds(180, 0, 100, 100);
         add(l14);
         
         l1 = new JLabel("Page 3: Account Details");
-        l1.setFont(new Font("Raleway", Font.BOLD, 22));
+        l1.setFont(new Font("Raleway", Font.BOLD, 20));
         
         l2 = new JLabel("Account Type:");
         l2.setFont(new Font("Raleway", Font.BOLD, 18));
@@ -56,10 +56,10 @@ public class Signup3 extends JFrame implements ActionListener{
         l10.setFont(new Font("Raleway", Font.BOLD, 18));
         
         l11 = new JLabel("Form No:");
-        l11.setFont(new Font("Raleway", Font.BOLD, 14));
+        l11.setFont(new Font("Raleway", Font.BOLD, 13));
         
         l12 = new JLabel(formno);
-        l12.setFont(new Font("Raleway", Font.BOLD, 14));
+        l12.setFont(new Font("Raleway", Font.BOLD, 13));
         
         b1 = new JButton("Submit");
         b1.setFont(new Font("Raleway", Font.BOLD, 14));
@@ -125,86 +125,86 @@ public class Signup3 extends JFrame implements ActionListener{
         
         setLayout(null);
         
-        l11.setBounds(700,10,70,30);
+        l11.setBounds(700,10,60,30);
         add(l11);
         
-        l12.setBounds(770,10,40,30);
+        l12.setBounds(760,10,40,30);
         add(l12);
         
-        l1.setBounds(280,40,400,40);
+        l1.setBounds(300,30,400,40);
         add(l1); 
         
-        l2.setBounds(100,140,200,30);
+        l2.setBounds(160,100,200,30);
         add(l2);
         
-        r1.setBounds(100,180,150,30);
+        r1.setBounds(140,140,150,30);
         add(r1);
         
-        r2.setBounds(350,180,300,30);
+        r2.setBounds(390,140,300,30);
         add(r2);
         
-        r3.setBounds(100,220,250,30);
+        r3.setBounds(140,180,250,30);
         add(r3);
         
-        r4.setBounds(350,220,250,30);
+        r4.setBounds(390,180,250,30);
         add(r4);
         
-        l3.setBounds(100,300,200,30);
+        l3.setBounds(160,240,200,30);
         add(l3);
         
-        l4.setBounds(330,300,250,30);
+        l4.setBounds(330,240,250,30);
         add(l4);
         
-        l5.setBounds(100,330,200,20);
+        l5.setBounds(160,265,200,20);
         add(l5);
         
-        l6.setBounds(330,330,500,20);
+        l6.setBounds(330,265,500,20);
         add(l6);
         
-        l7.setBounds(100,370,200,30);
+        l7.setBounds(160,300,200,30);
         add(l7);
         
-        l8.setBounds(330,370,200,30);
+        l8.setBounds(330,300,200,30);
         add(l8);
         
-        l9.setBounds(100,400,200,20);
+        l9.setBounds(160,325,200,20);
         add(l9);
         
-        l10.setBounds(100,450,200,30);
+        l10.setBounds(160,380,200,30);
         add(l10);
-        
-        c1.setBounds(100,500,200,30);
+
+        c1.setBounds(140,420,200,30);
         add(c1);
         
-        c2.setBounds(350,500,200,30);
+        c2.setBounds(390,420,200,30);
         add(c2);
         
-        c3.setBounds(100,550,200,30);
+        c3.setBounds(140,460,200,30);
         add(c3);
         
-        c4.setBounds(350,550,200,30);
+        c4.setBounds(390,460,200,30);
         add(c4);
         
-        c5.setBounds(100,600,200,30);
+        c5.setBounds(140,500,200,30);
         add(c5);
         
-        c6.setBounds(350,600,200,30);
+        c6.setBounds(390,500,200,30);
         add(c6);
         
-        c7.setBounds(100,680,600,20);
+        c7.setBounds(160,540,600,20);
         add(c7);
         
-        b1.setBounds(250,720,100,30);
+        b1.setBounds(250,565,100,30);
         add(b1);
         
-        b2.setBounds(420,720,100,30);
+        b2.setBounds(420,565,100,30);
         add(b2);
         
         
-        getContentPane().setBackground(Color.WHITE);
-        
-        setSize(850,850);
-        setLocation(500,120);
+        getContentPane().setBackground(Color.white);
+
+        setSize(850,640);
+        setLocation(200,10);
         setVisible(true);
         
         b1.addActionListener(this);

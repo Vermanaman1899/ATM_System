@@ -33,7 +33,7 @@ public class Signup extends JFrame implements ActionListener{
         add(l11);
         
         l1 = new JLabel("APPLICATION FORM NO. "+first);
-        l1.setFont(new Font("Raleway", Font.BOLD, 36));
+        l1.setFont(new Font("Raleway", Font.BOLD, 32));
         
         l2 = new JLabel("Page 1: Personal Details");
         l2.setFont(new Font("Raleway", Font.BOLD, 20));
@@ -99,8 +99,7 @@ public class Signup extends JFrame implements ActionListener{
         t7 = new JTextField();
         t7.setFont(new Font("Raleway", Font.BOLD, 14));
         
-       
-        
+
         b = new JButton("Next");
         b.setFont(new Font("Raleway", Font.BOLD, 14));
         b.setBackground(Color.BLACK);
@@ -144,87 +143,87 @@ public class Signup extends JFrame implements ActionListener{
         l1.setBounds(200,20,600,40);
         add(l1);
         
-        l2.setBounds(290,80,600,30);
+        l2.setBounds(290,65,600,30);
         add(l2);
         
-        l3.setBounds(100,140,100,30);
+        l3.setBounds(130,110,100,30);
         add(l3);
         
-        t1.setBounds(300,140,400,30);
+        t1.setBounds(300,110,400,30);
         add(t1);
         
-        l4.setBounds(100,190,200,30);
+        l4.setBounds(130,155,200,30);
         add(l4);
         
-        t2.setBounds(300,190,400,30);
+        t2.setBounds(300,155,400,30);
         add(t2);
         
-        l5.setBounds(100,240,200,30);
+        l5.setBounds(130,200,200,30);
         add(l5);
         
-        dateChooser.setBounds(300, 240, 400, 30);
+        dateChooser.setBounds(300, 200, 400, 30);
         
-        l6.setBounds(100,290,200,30);
+        l6.setBounds(130,245,200,30);
         add(l6);
         
-        r1.setBounds(300,290,60,30);
+        r1.setBounds(300,245,60,30);
         add(r1);
         
-        r2.setBounds(450,290,90,30);
+        r2.setBounds(450,245,90,30);
         add(r2);
         
-        l7.setBounds(100,340,200,30);
+        l7.setBounds(130,290,200,30);
         add(l7);
         
-        t3.setBounds(300,340,400,30);
+        t3.setBounds(300,290,400,30);
         add(t3);
         
-        l8.setBounds(100,390,200,30);
+        l8.setBounds(130,335,200,30);
         add(l8);
         
-        r3.setBounds(300,390,100,30);
+        r3.setBounds(300,335,100,30);
         add(r3);
         
-        r4.setBounds(450,390,100,30);
+        r4.setBounds(450,335,100,30);
         add(r4);
         
-        r5.setBounds(635,390,100,30);
+        r5.setBounds(635,335,100,30);
         add(r5);
         
         
         
-        l9.setBounds(100,440,200,30);
+        l9.setBounds(130,380,200,30);
         add(l9);
         
-        t4.setBounds(300,440,400,30);
+        t4.setBounds(300,380,400,30);
         add(t4);
         
-        l10.setBounds(100,490,200,30);
+        l10.setBounds(130,425,200,30);
         add(l10);
         
-        t5.setBounds(300,490,400,30);
+        t5.setBounds(300,425,400,30);
         add(t5);
         
-        l11.setBounds(100,540,200,30);
+        l11.setBounds(130,470,200,30);
         add(l11);
         
-        t6.setBounds(300,540,400,30);
+        t6.setBounds(300,470,400,30);
         add(t6);
         
-        l12.setBounds(100,590,200,30);
+        l12.setBounds(130,515,200,30);
         add(l12);
         
-        t7.setBounds(300,590,400,30);
+        t7.setBounds(300,515,400,30);
         add(t7);
         
-        b.setBounds(620,660,80,30);
+        b.setBounds(620,560,80,30);
         add(b);
         
         b.addActionListener(this); 
         
         getContentPane().setBackground(Color.WHITE);
         
-        setSize(850,660);
+        setSize(850,640);
         setLocation(200,10);
         setVisible(true);
     }
