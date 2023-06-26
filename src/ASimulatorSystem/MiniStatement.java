@@ -9,7 +9,7 @@ public class MiniStatement extends JFrame implements ActionListener{
  
     JButton b1, b2;
     JLabel l1;
-    MiniStatement(String pin){
+    MiniStatement(String cardno){
         super("Mini Statement");
         getContentPane().setBackground(Color.WHITE);
         setSize(400,550);
@@ -18,9 +18,9 @@ public class MiniStatement extends JFrame implements ActionListener{
         l1 = new JLabel();
         add(l1);
         
-        JLabel l2 = new JLabel("Indian Bank");
-        l2.setFont(new Font("System",Font.BOLD,16));
-        l2.setBounds(150, 20, 100, 50);
+        JLabel l2 = new JLabel("Naman's Bank");
+        l2.setFont(new Font("System",Font.BOLD,20));
+        l2.setBounds(120, 20, 250, 50);
         add(l2);
         
         JLabel l3 = new JLabel();
@@ -33,19 +33,19 @@ public class MiniStatement extends JFrame implements ActionListener{
         
         try{
             Conn c = new Conn();
-            ResultSet rs = c.s.executeQuery("select * from login where pin = '"+pin+"'");
+            ResultSet rs = c.s.executeQuery("select * from login where cardnumber = '"+cardno+"'");
             while(rs.next()){
-                l3.setText("Card Number:    " + rs.getString("cardno").substring(0, 4) + "XXXXXXXX" + rs.getString("cardno").substring(12));
+                l3.setText("Card Number:    " + rs.getString("cardnumber").substring(0, 4) + "XXXXXXXX" + rs.getString("cardnumber").substring(12));
             }
         }catch(Exception e){}
         	 
         try{
             int balance = 0;
             Conn c1  = new Conn();
-            ResultSet rs = c1.s.executeQuery("SELECT * FROM bank where pin = '"+pin+"'");
+            ResultSet rs = c1.s.executeQuery("SELECT * FROM bank where cardnumber = '"+cardno+"'");
             while(rs.next()){
-                l1.setText(l1.getText() + "<html>"+rs.getString("date")+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + rs.getString("mode") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + rs.getString("amount") + "<br><br><html>");
-                if(rs.getString("mode").equals("Deposit")){
+                l1.setText(l1.getText() + "<html>"+rs.getString("date")+ " : " + rs.getString("type") + " of Rs." + rs.getString("amount") + "<br><br><html>");
+                if(rs.getString("type").equals("Deposit")){
                     balance += Integer.parseInt(rs.getString("amount"));
                 }else{
                     balance -= Integer.parseInt(rs.getString("amount"));
