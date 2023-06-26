@@ -17,26 +17,35 @@ This application enables the customers to perform the basic banking transactions
 
 
 # Installation details:
+
 1. Make sure you have latest version of JDK (JDK 18 or above).
-
-2 .Download the zip of the project from the repository and and unzip in the location wherever you want to.
-
+2. Download the zip of the project from the repository and and unzip in the location wherever you want to.
 3. Open the folder in your IDE, and add the following jar files in your referenced libraries or modules:
-   => mysql-connector-java-8.0.30.jar or above for JDBC connection
-   => JCalender
-
+      => mysql-connector-java-8.0.30.jar or above for JDBC connection
+      => JCalender
 4. Run login.java from src
 
 # Screenshots:
 <img width="589" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/ea1dd2c7-3ffe-4272-bd1c-f4dbf8ed6e19">
+
 <img width="375" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/bd30ce82-49be-4af0-b98b-4f464e17df70">
+
 <img width="377" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/f882f75c-4863-452d-8b04-90f31c58dc2b">
+
 <img width="621" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/621e4adc-77cf-4435-9b37-caa20ac30183">
+
 <img width="623" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/fb5bf892-0c42-45ec-90e6-09d890111a03">
+
 <img width="617" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/2f85e1a8-48d6-444c-9a60-0a1a2f584475">
+
 <img width="371" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/4c87d3e8-90f6-4dc5-b619-883a53549463">
+
 <img width="370" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/cd3863ec-f68b-474f-8666-6ffed4786ccb">
+
 <img width="372" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/2b66103b-a25f-4a65-a102-c14157f78d51">
+
 <img width="373" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/5bad2544-8865-4f89-bae0-1471f59ae09f">
+
 <img width="376" alt="image" src="https://github.com/Vermanaman1899/ATM_System/assets/92973083/ff75992c-a5f5-47b9-a78f-1b665528a0ff">
+
 
